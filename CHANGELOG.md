@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added ARRAYFORMULA function. (#630)
 - Added performance improvements for array handling. (#629)
 
+### Fixed
+- Fixed an issue with losing formating info about DateTime numbers. (#626)
+
 ## [0.5.0] - 2021-04-15
 
 ### Changed
