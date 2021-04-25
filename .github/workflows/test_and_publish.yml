@@ -1,4 +1,4 @@
-name: Linter
+name: Test & Publish
 
 on: [push]
 
@@ -8,7 +8,7 @@ jobs:
       matrix:
         node-version: [ '14' ]
         os: [ 'ubuntu-latest' ]
-    name: ESLINT
+    name: Tests
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@722adc63f1aa60a57ec37892e133b1d319cae598 # https://github.com/actions/checkout/releases/tag/v2.0.0
@@ -25,3 +25,7 @@ jobs:
       - name: JavaScript lint
         run: |
           npm run lint
+
+      - name: Run tests
+        run: |
+          npm run bundle-all
